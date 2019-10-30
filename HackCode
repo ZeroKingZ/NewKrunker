@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         Hoaige Krunker Hack
-// @namespace    https://youtube.com/Hoaige
+// @name         YT : Hoaige
+// @namespace    https://youtube.com/hoaige
 // @version      1.8.1.2
 // @author       Hoaige
 // @match        *://krunker.io/*
@@ -57,7 +57,7 @@ GUI.style = "float:right;width:100%;background-color: rgba(0,0,0,0.25);border-ra
 function guiReload() {
     GUI.innerHTML = "";
     if(unsafeWindow[getHack]("GUI").status) {
-        GUI.innerHTML += "<br><h2 style='color:#ffff00;'>YT: Hoaige X</h2><hr>";
+        GUI.innerHTML += "<br><h2 style='color:#ffff00;'>YT: Hoaige</h2><hr>";
         unsafeWindow[hacks].forEach(function(hack) {
             GUI.innerHTML += `<h3><span style='float:left;margin-left:10%;color:#FFBD48'>[${hack.keybind}]</span><span style='margin-left:-10%;color:${hack.status ? "#98EA2F" : "#FF4040"};'>${hack.name}</span></h3>`;
         });
@@ -222,3 +222,4 @@ function patch(script) {
     unsafeWindow.Function = new Proxy(Function, handler);
     hideHook(unsafeWindow.Function, original_Function);
 })()
+
